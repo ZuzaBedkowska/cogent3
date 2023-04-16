@@ -1,0 +1,4 @@
+FROM devops1
+
+#wywolaj testy
+RUN pytest tests
