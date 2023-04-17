@@ -5,6 +5,7 @@ pipeline {
       steps{
         echo 'Building...'
         sh "ls -la"
+        sh "docker build -t build_container -f Dockerfile_build > logs_build.txt"
       }
     }
     stage('Test') {
