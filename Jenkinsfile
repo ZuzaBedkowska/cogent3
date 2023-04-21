@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage ('Prepare') {
+      steps{
+      sh 'apt-get update'
+      }
+    }
     stage('Build') {
       steps{
         echo 'Building...'
