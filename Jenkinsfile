@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Prepare') {
       steps{
-      sh 'sudo apt-get update'
+      sh 'apt-get install \ ca-certificates \ curl \ gnupg'
       }
     }
     stage('Build') {
