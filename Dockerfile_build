@@ -1,7 +1,7 @@
 FROM python:3.9.16
 
 #sciagniecie repo
-RUN git clone https://github.com/cogent3/cogent3.git
+RUN git clone https://github.com/ZuzaBedkowska/cogent3.git
 
 #pobranie zawartosci requirements.txt
 WORKDIR "cogent3"
