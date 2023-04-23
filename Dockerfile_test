@@ -1,4 +1,6 @@
 FROM build_container
 
+WORKDIR cogen3
+
 #wywolaj testy
 RUN pytest tests
