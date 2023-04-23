@@ -1,4 +1,4 @@
-FROM devops1
+FROM build_container
 
 #wywolaj testy
 RUN pytest tests
