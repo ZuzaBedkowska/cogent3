@@ -1,4 +1,5 @@
 FROM build_container
 
 #wywolaj testy
-RUN pytest tests
+RUN git clone https://github.com/ZuzaBedkowska/BOIL_CPM.git
+RUN rm -rf BOIL_CPM
