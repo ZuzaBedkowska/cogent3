@@ -3,6 +3,4 @@ FROM build_container
 RUN rm -rf .git \
      && rm -rf tests \
      && rm -rf *.md \
-     && rm -rf *.rst \
-     && rm -rf *.txt \
      && rm -rf *.yml
