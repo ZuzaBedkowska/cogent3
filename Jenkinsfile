@@ -46,7 +46,7 @@ pipeline {
         sh "ls -la"
         sh "docker build -t deploy_container -f ./Dockerfile_deploy . > ./logs_deploy.txt"
         sh "docker save deploy_container > cogent3.tar"
-        archiveArtifacts artifacts 'cogent3.tar', onlyIfSuccessful: true
+        archiveArtifacts artifacts: 'cogent3.tar', onlyIfSuccessful: true
       }
       post {
                 always{
