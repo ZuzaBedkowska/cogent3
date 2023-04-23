@@ -42,6 +42,21 @@ pipeline {
     stage ('Deploy') {
       steps{
        echo 'Deploying...'
+        sh "pwd"
+        sh "ls -la"
+        sh "docker build -t deploy_container -f ./Dockerfile_deploy . > ./logs_deploy.txt"
+      }
+      post {
+                always{
+                    archiveArtifacts(artifacts: 'logs_*.txt', fingerprint: true, followSymlinks: false)
+                }
+                success {
+                    echo 'Success!'
+                }
+                failure {
+                    echo 'Failed in Deploy!'
+                }
+            }
       }
     }
   }
