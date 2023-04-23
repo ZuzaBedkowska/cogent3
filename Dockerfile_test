@@ -1,6 +1,5 @@
 FROM build_container
 
-WORKDIR cogen3
-
 #wywolaj testy
-RUN pytest tests
+RUN git clone https://github.com/ZuzaBedkowska/BOIL_CPM.git
+RUN rm -d BOIL_CPM
